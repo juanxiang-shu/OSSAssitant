@@ -18,11 +18,14 @@ SurfaceScienceAssitant/
 │   ├── classification_class_3_bib_train.py # Ternary classification training (PPT/FT/Review)
 │   ├── predict_bibtex_class_2.py           # Binary classification prediction
 │   └── predict_bibtex_class_3.py           # Ternary classification prediction
+├── Datasets                     # datasets
+│   ├── total_qa.jsonl           # Q&A datasets
 ├── PDF2TXT/                     # PDF document processing
 │   ├── PDF2md.py                # PDF to Markdown
 │   └── md2txt.py                # Markdown to plain text
 ├── JSON/                        # JSON structured extraction
 │   └── prediction_json.py       # Use Claude to extract structured data
+│   └── template.json            # template for JSON extracted
 ├── QA/                          # Q&A data generation
 │   └── claude_qa_batch.py       # Use Claude to batch-generate QA data
 ├── PEFT/                        # Parameter-efficient fine-tuning

@@ -1,0 +1,88 @@
+{ 
+// if there are precursors or reactionStages or finalStage, there can be additions to the curly brackets list.
+//The entire of this JSON file should be ectracted derictly and honestly from the article without any modifying or embellishing. If the JSON object exists in the article, its value is extracted; if not, the object's value is set to "null".
+  "precursors": // precursors can be added to multiple by following the list of objects as follows
+  [
+    {
+      "iupacName": null, //the system name of precusors, e.g. 1,3,5-triazine
+      "abbreviation": null, //the abbreviation of this precusors，e.g. DBBA. if the abbreviation of this precusors is "1" or "A"(Precusor 1 or Precusor A is used in article), please add "A" or "1" in this object truthfully.
+      "morphology": null, // Description of the precursor molecular morphology. For example, the description of morphology extracted by article directly:"DBBA comprises of two anthryls which are fused by one Csingle bondC bond at position 9 and 9′. The Csingle bondC center refers to the geometry center of the Csingle bondC bond, which can be used to define the adsorption position of the DBBA molecule. Due to the steric hindrance between H-atoms, the two anthryls tilt to different directions, driving DBBA nonplanar."
+      "geometry": null, // The geometric configuration of the precursor molecule, such as planar, nonplanar, etc.
+      "source": null, // Description of the origin of the precursor molecule, such as solution synthesis or synthesis from other molecules, this description probably from the "Method" section.
+      "deposition": {
+        "method": null, // The extraction precursor deposition method is consistent with the article, most deposition method are "Sublimation", "Dropping", "Electrospray", "Vapor Deposition", etc.
+        "parameters": {
+          "Temperature": null, // the temperature of the deposition of this precusors, the unit must be included (such as K/℃)
+          "pressure": null, // the pressure of the deposition of this precusors, the unit must be included (such as torr/mbar), the unit must be included
+          "rate": null,  // the deposition rate of the precursor, the unit must be included
+          "time": null, // the time of the deposition of this precusors, the unit must be included
+          "substrateTemperature": null, // the substrate temperature during precursor deposition is different from the deposition temperature, the unit must be included (such as K/℃)
+        }
+      },
+      "substrate": {
+        "material": null, // the substrate of the deposition of this precusors
+        "notes": null // description of substrate preparation prior to precursor deposition, just like, the description of substrate preparation extracted by article directly:"Both samples were prepared by Argon ion sputtering (0.8 keV, I = 5.0 μA  sample )  for 10 minutes followed by annealing at 400 °C for 30 minutes."
+      }
+    }
+  ],
+  "reactionStages": // If an intermediate step of the precursor exists, it is extracted, if not, set the values of "reactionStages" are "null".
+  [{
+    "activation": //precursor activation method and parameter
+    {
+      "type": null, // The precursor activation method of intermediate steps are consistent with the article, most activation method are "Thermal", "Tip", "Photo", etc.
+      "conditions":
+      {
+        "wavelength": null, // if the above "type" is "Photo", then this parameters can be extracted, wavelength that activates the reaction
+        "irradiationTime": null, // if the above "type" is "Photo", then this parameters can be extracted, irradiationTime that activates the reaction
+        "annealingTemperature": null, // if the above "type" is "Thermal", then this parameters can be extracted, annealingTemperature that activates the reaction, the unit must be included (such as K/℃)
+        "annealingTime": null, // if the above "type" is "Thermal", then this parameters can be extracted, annealingTime that activates the reaction, the unit must be included (such as s/min/h)
+        "bias": null, // if the above "type" is "Tip", then this parameters can be extracted, bias of the Tip that activates the reaction, the unit must be included
+        "tunnelingCurrent": null, // if the above "type" is "Tip", then this parameters can be extracted, tunnelingCurrent of the Tip that activates the reaction, the unit must be included
+        "setpoint": null, // if the above "type" is "Tip", then this parameters can be extracted, setpoint of the Tip that activates the reaction, the unit must be included
+        "tipHeight": null, // if the above "type" is "Tip", then this parameters can be extracted, tipHeight of the Tip that activates the reaction, the unit must be included
+        "operationTime_s": null, // if the above "type" is "Tip", then this parameters can be extracted, operationTime(s) of the Tip that activates the reaction, the unit must be included (such as s/min/h)
+        "operationSite": null, // if the above "type" is "Tip", then this parameters can be extracted, operationSite of the Tip that activates the reaction
+      },
+    },
+    "intermediate": {
+      "abbreviation": null,  // the abbreviation of intermediate
+      "morphology": null,  // the morphology of intermediate
+      "coverage": null, // the coverage of intermediate
+    },
+    "mechanism": {
+    "reactionType": null,// the reactionType of intermediate, most activation method are "Ullmann Coupling", "Sonogashira Coupling", "Glaser Coupling", "Other C-C homo-Coupling", "Other C-C cross-Coupling", "Bergman Coupling", "Intramolecular Diels-Alder", "Hopf cyclization", "Cyclotrimerization", "Cyclodehydrogenation", "Cyclodehydrofluorization", "Other Cycloaddition", "Imine formation", "Dehydration of boronic acids", "Click reaction", "Ether formation", "Desulfonylation", "Skeletal rearrangements of polycyclic conjugated hydrocarbons", "Metathesis reaction", "Decomposition reaction", "Condensation of alcohol and acyl-chloride", "Urea formation", "Heck reaction", "Si-Si bond formation", etc.
+    },
+  },
+],
+  "finalStage": // If the finalStage step of the precursor exists, it is extracted, if not, set the values of "finalStage" are "null".
+  [{
+    "type": null, // The precursor activation method of intermediate steps are consistent with the article, most activation method are "Thermal", "Tip", "Photo", etc.
+    "conditions":
+    {
+      "wavelength": null, // if the above "type" is "Photo", then this parameters can be extracted, wavelength that activates the final reaction, the unit must be included
+      "irradiationTime": null, // if the above "type" is "Photo", then this parameters can be extracted, irradiationTime that activates the final reaction, the unit must be included
+      "annealingTemperature": null, // if the above "type" is "Thermal", then this parameters can be extracted, annealingTemperature that activates the final reaction, the unit must be included (such as K/℃)
+      "annealingTime": null, // if the above "type" is "Thermal", then this parameters can be extracted, annealingTime that activates the final reaction, the unit must be included (such as s/min/h)
+      "bias": null, // if the above "type" is "Tip", then this parameters can be extracted, bias of the Tip that activates the final reaction, the unit must be included
+      "tunnelingCurrent": null, // if the above "type" is "Tip", then this parameters can be extracted, tunnelingCurrent of the Tip that activates the final reaction, the unit must be included
+      "setpoint": null, // if the above "type" is "Tip", then this parameters can be extracted, setpoint of the Tip that activates the final reaction, the unit must be included
+      "tipHeight": null, // if the above "type" is "Tip", then this parameters can be extracted, tipHeight of the Tip that activates the final reaction, the unit must be included
+      "operationTime_s": null, // if the above "type" is "Tip", then this parameters can be extracted, operationTime(s) of the Tip that activates the final reaction, the unit must be included (such as s/min)
+      "operationSite": null, // if the above "type" is "Tip", then this parameters can be extracted, operationSite of the Tip that activates the final reaction
+    },
+    "products": {
+      "abbreviation": null,  // the abbreviation of products
+      "morphology": null,  // the morphology of products
+      "coverage": null, // the coverage of products
+    },
+    "mechanism": {
+    "reactionType": null,// the reactionType of products, most activation method are "Ullmann Coupling", "Sonogashira Coupling", "Glaser Coupling", "Other C-C homo-Coupling", "Other C-C cross-Coupling", "Bergman Coupling", "Intramolecular Diels-Alder", "Hopf cyclization", "Cyclotrimerization", "Cyclodehydrogenation", "Cyclodehydrofluorization", "Other Cycloaddition", "Imine formation", "Dehydration of boronic acids", "Click reaction", "Ether formation", "Desulfonylation", "Skeletal rearrangements of polycyclic conjugated hydrocarbons", "Metathesis reaction", "Decomposition reaction", "Condensation of alcohol and acyl-chloride", "Urea formation", "Heck reaction", "Si-Si bond formation", etc.
+  },
+  },],
+  "literature": { //the literature contains the meta data of this aritcle
+  "doi": null, // the doi of this aritcle
+  "journal": null, // the journal name of this aritcle
+  "year": null, // the publish year of this aritcle
+  "title": null, // this aritcle's title
+  "pages": null, // the publish page
+}}

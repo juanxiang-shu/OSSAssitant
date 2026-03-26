@@ -205,37 +205,33 @@ export OPENAI_API_KEY="your_key_here"
 
 ```bash
 # 1. Convert PubMed TXT to BibTeX
-python T5/txt_bib_predict.py \
-  --input data/pubmed_sample.txt \
-  --output data/converted.bib \
-  --model_path models/t5_txt2bib_best
+# (Edit INPUT_TXT_PATH and OUTPUT_BIB_PATH in T5/txt_bib_predict.py first)
+python T5/txt_bib_predict.py
 
 # 2. Classify literature relevance
 python Classification/predict_bibtex_class_2.py \
-  --input data/converted.bib \
-  --output data/classified.json \
-  --model_path models/scibert_class2_best
+  --model_path models/scibert_class2_best \
+  --pretrained_model models/scibert \
+  --test_data data/converted.bib \
+  --output_dir data/classified
 
 # 3. Process PDF to text
-python PDF2TXT/PDF2md.py --input_dir data/pdfs --output_dir data/markdown
-python PDF2TXT/md2txt.py --input_dir data/markdown --output_dir data/texts
+# (Edit input_root/output_root in PDF2TXT/PDF2md.py first)
+python PDF2TXT/PDF2md.py
+# (Edit input_directory/output_directory in PDF2TXT/md2txt.py first)
+python PDF2TXT/md2txt.py
 
 # 4. Extract structured information
-python JSON/prediction_json.py \
-  --input data/texts \
-  --output data/structured_data.json \
-  --template JSON/template.json
+# (Edit TXT_PATH and SAVE_PREDICTIONS in JSON/prediction_json.py first)
+python JSON/prediction_json.py
 
 # 5. Generate QA pairs
-python QA/claude_qa_batch.py \
-  --input data/texts \
-  --output data/qa_pairs.jsonl \
-  --mode batch
+# (Edit TXT_PATH, JSON_PATH, and SAVE_QA_DATA in QA/claude_qa_batch.py first)
+python QA/claude_qa_batch.py
 
 # 6. Fine-tune model (optional)
-python PEFT/Lora_CoT.py \
-  --data data/qa_pairs.jsonl \
-  --output_dir models/llama_finetuned
+# (Edit local_model_path and output paths in PEFT/Lora_CoT.py first)
+python PEFT/Lora_CoT.py
 
 # 7. Run RAG Q&A system
 python RAG/RAG_router.py
@@ -296,115 +292,86 @@ mkdir -p data/{classified,json_extraction,qa_generation,rag,t5}
 wget https://raw.githubusercontent.com/juanxiang-shu/OSSAssitant/main/examples/t5/pubmed_sample.txt -O data/raw/pubmed.txt
 wget https://raw.githubusercontent.com/juanxiang-shu/OSSAssitant/main/examples/qa_generation/sample_article.txt -O data/texts/sample_article.txt
 wget https://raw.githubusercontent.com/juanxiang-shu/OSSAssitant/main/examples/qa_generation/sample_article.json -O data/structured/sample_article.json
-wget https://raw.githubusercontent.com/juanxiang-shu/OSSAssitant/main/examples/rag/json/au111_ullmann.json -O data/knowledge_base/au111_ullmann.json
+wget "https://raw.githubusercontent.com/juanxiang-shu/OSSAssitant/main/examples/rag/json/sonogashira%20cross-coupling%20and%20homocoupling%20on%20a%20silver%20surface%20chlorobenzene%20and%20phenylacetylene%20on%20Ag100.json" -O data/knowledge_base/example_surface_reaction.json
 wget "https://raw.githubusercontent.com/juanxiang-shu/OSSAssitant/main/examples/rag/txt/sonogashira%20cross-coupling%20and%20homocoupling%20on%20a%20silver%20surface%20chlorobenzene%20and%20phenylacetylene%20on%20Ag100.txt" -O data/knowledge_base/example_surface_reaction.txt
 ```
 
 ### Step 2: Convert PubMed Data
 
 ```bash
+# Edit the configuration variables (T5_MODEL_PATH, TOTEL_LABELED_TXT, etc.)
+# at the top of T5/txt_bib_train.py before running.
 # Train T5 model (if needed) or use pre-trained weights
-python T5/txt_bib_train.py \
-  --num_epochs 10 \
-  --batch_size 8
+python T5/txt_bib_train.py
 
+# Edit the configuration variables (INPUT_TXT_PATH, OUTPUT_BIB_PATH, T5_MODEL_PATH, etc.)
+# at the top of T5/txt_bib_predict.py before running.
 # Convert new data
-python T5/txt_bib_predict.py \
-  --model_path models/t5_txt2bib_best \
-  --input data/raw/pubmed.txt \
-  --output data/converted/converted.bib \
-  --batch_size 16
+python T5/txt_bib_predict.py
 ```
 
 ### Step 3: Classify Literature
 
 ```bash
+# Edit the yes_path, no_path and model_path variables inside
+# Classification/classification_class_2_bib_train.py before running.
 # Train classifiers (if needed) or use pre-trained weights
-python Classification/classification_class_2_bib_train.py \
-  --yes_bib data/raw/yes.bib \
-  --no_bib data/raw/no.bib \
-  --output_dir models/scibert_class2 \
-  --num_folds 5
+python Classification/classification_class_2_bib_train.py
 
 # Classify papers
 python Classification/predict_bibtex_class_2.py \
   --model_path models/scibert_class2_best \
-  --input data/converted/converted.bib \
-  --output data/classified/binary_results.json
+  --pretrained_model models/scibert \
+  --test_data data/converted/converted.bib \
+  --output_dir data/classified
 ```
 
 ### Step 4: Process PDFs
 
 ```bash
+# Edit input_root and output_root variables at the top of PDF2TXT/PDF2md.py before running.
 # Convert PDFs to Markdown
-python PDF2TXT/PDF2md.py \
-  --timeout 300 \
-  --workers 4
+python PDF2TXT/PDF2md.py
 
+# Edit input_directory and output_directory variables in the main() function
+# of PDF2TXT/md2txt.py before running.
 # Convert Markdown to plain text
-python PDF2TXT/md2txt.py \
-  --remove_refs \
-  --clean_formulas
+python PDF2TXT/md2txt.py
 ```
 
 ### Step 5: Extract Structured Data
 
 ```bash
+# Edit TXT_PATH and SAVE_PREDICTIONS in the CONFIG dict
+# at the top of JSON/prediction_json.py before running.
 # Extract structured information using Claude
-python JSON/prediction_json.py \
-  --input_dir data/texts \
-  --output_dir data/structured \
-  --template JSON/template.json \
-  --batch_size 10 \
-  --retry 3
+python JSON/prediction_json.py
 ```
 
 ### Step 6: Generate QA Pairs
 
 ```bash
-# Create batch job for QA generation (cost-effective)
-python QA/claude_qa_batch.py \
-  --input data/texts \
-  --output data/qa/qa_pairs.jsonl \
-  --mode batch \
-  --qa_per_doc 5 \
-  --include_reasoning
-
-# Check batch status
-python QA/claude_qa_batch.py \
-  --mode check_batch \
-  --batch_id batch_abc123xyz
-
-# Retrieve results when complete
-python QA/claude_qa_batch.py \
-  --mode get_results \
-  --batch_id batch_abc123xyz \
-  --output data/qa/qa_pairs.jsonl
+# Edit TXT_PATH, JSON_PATH, SAVE_QA_DATA, and USE_BATCH_API in the CONFIG dict
+# at the top of QA/claude_qa_batch.py before running.
+# Generate QA pairs (batch API is cost-effective when USE_BATCH_API is True)
+python QA/claude_qa_batch.py
 ```
 
 ### Step 7: Fine-tune Model
 
 ```bash
+# Edit local_model_path and other path variables at the top of PEFT/Lora_CoT.py
+# before running.
 # Fine-tune LLaMA 3.1 8B with LoRA
-python PEFT/Lora_CoT.py \
-  --data_path data/qa/qa_pairs.jsonl \
-  --model_path models/Meta-Llama-3.1-8B \
-  --output_dir models/llama_finetuned \
-  --lora_rank 8 \
-  --num_epochs 3 \
-  --batch_size 1 \
-  --gradient_accumulation_steps 4 \
-  --learning_rate 2e-4 \
-  --use_4bit
+python PEFT/Lora_CoT.py
 
 # Monitor training (in another terminal)
 # SwanLab: http://localhost:5092
 
+# Edit BASE_MODEL_PATH and LORA_CHECKPOINT_PATH at the top of PEFT/Inference.py
+# before running.
 # Test inference
-python PEFT/Inference.py \
-  --model_path models/Meta-Llama-3.1-8B \
-  --lora_path models/llama_finetuned \
-  --prompt "What is the Ullmann coupling reaction mechanism?"
+python PEFT/Inference.py
 ```
 
 ### Step 8: Build RAG System
@@ -414,6 +381,8 @@ python PEFT/Inference.py \
 cp data/texts/*.txt data/knowledge_base/txt/
 cp data/structured/*.json data/knowledge_base/json/
 
+# Edit KNOWLEDGE_DIR and SYNTHESIS_KNOWLEDGE_DIR at the top of RAG/RAG_router.py
+# before running.
 # Build FAISS indices and run system
 python RAG/RAG_router.py
 

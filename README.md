@@ -82,7 +82,7 @@ This project implements a complete end-to-end workflow for processing scientific
 ┌─────────────────────────────────────────────────────────────────┐
 │  Module 5: QA Generation                                        │
 │  • Generate Chain-of-Thought QA pairs                           │
-│  • Model: DeepSeek (Batch API)                                  │
+│  • Model: Claude Sonnet 4 (Batch API)                           │
 └────────────────────────┬────────────────────────────────────────┘
                          │
                          ▼

@@ -1,0 +1,465 @@
+{
+  "precursors": {
+    "precursors": [
+      {
+        "iupacName": "1,3,5-tris(chloroethynyl)benzene",
+        "abbreviation": "tCEB",
+        "smiles": "ClC#CC1=CC(C#CCl)=CC(C#CCl)=C1",
+        "formula": "C₁₂H₃Cl₃",
+        "morphology": "3-fold symmetry containing Cl-alkynyl",
+        "functionalGroups": "Chloroethynyl (-C≡CCl) groups",
+        "chargeDistribution": null,
+        "geometry": "Trigonal symmetry with three chloroethynyl substituents",
+        "symmetryGroup": null,
+        "dipoleMoment": null,
+        "description": "3-fold\nsymmetry containing Cl-alkynyl\n",
+        "source": null,
+        "deposition": {
+          "method": "Sublimation",
+          "parameters": {
+            "Temperature": null,
+            "pressure": null,
+            "rate": null,
+            "time": null,
+            "substrateTemperature": "150 K",
+            "description": "The deposition of tCEB onto the surface of Ag(111) at 150 K resulted in the formation of disordered short chain structures."
+          }
+        },
+        "substrate": {
+          "material": "Ag(111) and Au(111)",
+          "notes": null
+        }
+      }
+    ]
+  },
+  "adsorption": {
+    "interactionType": "Chemical Bond",
+    "site": null,
+    "coverage": null,
+    "configuration": null,
+    "bindingEnergy": null,
+    "bondLength": null,
+    "functionalGroupActivated": null,
+    "description": "\nA submonolayer of tCEB on Au(111) at 150 K, which resulted in the formation of two phases. A close packing of tCEB monomers and dimers, in which unreacted tCEB molecules can be found (as indicated by the white dashed circle). The length from the benzene center to the Cl end was measured as 5.6 ± 0.2 Å, which was consistent with the distance obtained by the DFT calculations (5.7 Å). It is worth noting that the unreacted tCEB had a low concentration of less than 5%, suggesting that the Cl–alkynyl bond can also be efficiently activated on the Au(111) surface at 150 K. A tCEB in which one Cl–alkynyl is activated to form Cl–Au-alkynyl. The Cl–Au–alkynyl moiety is evidently different from Cl–alkynyl; this is because the Au atom appears as a bright round protrusion, whereas the adjacent C≡C group becomes dim. The distance between the benzene center and the Cl end in the reacted tCEB was measured as 8.4 ± 0.2 Å, which was consistent with the distance obtained through the DFT calculations (8.3 Å). Another phase observed in the same sample at 150 K, which consists of self-assembled dimers of tCEB. The magnified image in Figure2d shows that the alkynyl groups of two tCEB units in a dimer are linked by a gold atom. The length between the two benzene rings obtained by STM measurement was 12 ± 0.5 Å; this value was consistent with that obtained through the DFT calculations (12.0 Å).\n"
+  },
+  "reactionStages": {
+    "reactionStages": [
+      {
+        "activation": {
+          "type": "Thermal",
+          "conditions": {
+            "annealingTemperature": "300K",
+            "annealingTime": null,
+            "heatingRate": null,
+            "heatingMethod": null
+          },
+          "description": "two Cl−alkynyl bonds are activated, and one Cl−alkynyl bond remains intact in the tCEB unit. When the sample was annealed at 300 K, irregular\norganometallic networks formed.  A magnified image  shows a network in which all three Cl−alkynyl bonds of tCEB are activated, and the structural fitting corroborates the STM results. A large-scale statistical analysis indicated that 74% of the networks were hexagonal, whereas the other 26% were irregular (four-, five-, and seven-membered) rings, thereby suggesting the occurrence of kinetic trapping during the formation of Ag-alkynyl networks at room temperature. The results indicate that the formation of organometallic networks on Ag(111) is a fast process, in which the stepwise growth mechanism is difficult to monitor when using the temperature progression approach."
+        },
+        "intermediate": {
+          "abbreviation": null,
+          "geometry": "disordered short chain structures",
+          "iupacName": null,
+          "formula": null,
+          "functionalGroups": null,
+          "morphology": "irregular organometallic networks\nA large-scale statistical analysis indicated that 74% of the networks were hexagonal, whereas the other 26% were irregular (four-, five-,\nand seven-membered) rings",
+          "smiles": null,
+          "coverage": null,
+          "symmetryGroup": null,
+          "interMolecularDistance": null,
+          "structuralChanges": "three Cl–alkynyl bonds of tCEB are activated",
+          "chargeDistribution": null,
+          "dipoleMoment": null,
+          "orientationAngle": null,
+          "description": " network in which all\nthree Cl−alkynyl bonds of tCEB are activated, and the\nstructural fitting corroborates the STM results. A"
+        },
+        "characterizations": {
+          "characterizations": [
+            {
+              "instrument": {
+                "type": "Ultra-High Vacuum STM",
+                "parameters": {
+                  "scantemp": "77K",
+                  "bias": "-1V",
+                  "tunnelingCurrent": "0.1 nA",
+                  "conditions": {
+                    "setpoint": "0.1 nA"
+                  },
+                  "description": "A network in which all three Cl−alkynyl bonds of tCEB are activated, and the structural fitting corroborates the STM results. A large-scale statistical analysis indicated that 74% of the networks were hexagonal, whereas the other 26% were irregular (four-, five-,\nand seven-membered) rings, thereby suggesting the occurrence of kinetic trapping during the formation of Ag-alkynyl networks at room temperature. The results indicate that the formation of organometallic networks on Ag(111) is a fast process, in which the stepwise growth mechanism is difficult to monitor when using the temperature progression approach."
+                }
+              }
+            }
+          ]
+        },
+        "mechanism": {
+          "reactionType": "Other C-C cross-Coupling",
+          "reactionDescription": null,
+          "kinetics": {
+            "activationEnergy": null,
+            "rateConstant": null,
+            "reactionOrder": null,
+            "preExponentialFactor": null
+          },
+          "thermodynamics": {
+            "energyBarrier": null,
+            "freeEnergy": null,
+            "excitationEnergy": null,
+            "reactionEnthalpy": null
+          }
+        }
+      },
+      {
+        "activation": {
+          "type": "Thermal",
+          "conditions": {
+            "annealingTemperature": "393K",
+            "annealingTime": null,
+            "heatingRate": null,
+            "heatingMethod": null
+          },
+          "description": "When the sample was annealed at 300 K, irregular organometallic networks formed. By increasing the annealing temperature to 393 K, the irregular organometallic network transformed to a single domain of large-scale honeycomb Ag–alkynyl networks"
+        },
+        "intermediate": {
+          "abbreviation": null,
+          "geometry": "irregular organometallic networks",
+          "iupacName": null,
+          "formula": null,
+          "functionalGroups": null,
+          "morphology": "the irregular organometallic network transformed to a single domain of large-scale honeycomb Ag–alkynyl networks",
+          "smiles": null,
+          "coverage": null,
+          "symmetryGroup": null,
+          "interMolecularDistance": "the honeycomb Ag–alkynyl networks (unit cell of a = b = 21.3 ± 0.8 Å, θ = 120°).\nThe distance between the benzene rim and the center of the chlorine atom was measured to be 2.7 ± 0.2 Å.",
+          "structuralChanges": "74% of the networks were hexagonal, whereas the other 26% were irregular (four-, five-, and seven-membered) rings.",
+          "chargeDistribution": null,
+          "dipoleMoment": null,
+          "orientationAngle": null,
+          "description": "The efficient transformation from irregular structures to honeycomb Ag−alkynyl networks at a mild annealing temperature of 393 K demonstrated a good reversibility of the break/formation reactions of the Ag− alkynyl bond on the Ag(111) surface. This facilitated the self- healing process for repairing irregular rings that were observed in the irregular organometallic networks to afford thermody- namically stable honeycomb networks."
+        },
+        "characterizations": {
+          "characterizations": [
+            {
+              "instrument": {
+                "type": "Ultra-High Vacuum STM",
+                "parameters": {
+                  "scantemp": "77K",
+                  "bias": "-1.0V",
+                  "tunnelingCurrent": "0.1 nA",
+                  "conditions": {
+                    "setpoint": "0.1 nA"
+                  },
+                  "description": "When the sample was annealed to 393 K, the tCEB units were linked to form significantly longer zigzag chains, which self-assembled in a\nstaggered arrangement to form a compact structure."
+                }
+              }
+            }
+          ]
+        },
+        "mechanism": {
+          "reactionType": null,
+          "reactionDescription": "The efficient transformation from irregular structures to honeycomb Ag−alkynyl networks at a mild annealing temperature of 393 K demonstrated a good reversibility of the break/formation reactions of the Ag− alkynyl bond on the Ag(111) surface. This facilitated the self- healing process for repairing irregular rings that were observed in the irregular organometallic networks to afford thermody- namically stable honeycomb networks.\nthe detailed structures of the honeycomb Ag−alkynyl networks (unit cell of a = b = 21.3 ± 0.8 Å, θ = 120°), which match well with the chemical structure fitted on it.",
+          "kinetics": {
+            "activationEnergy": "−71.1 meV",
+            "rateConstant": null,
+            "reactionOrder": null,
+            "preExponentialFactor": null
+          },
+          "thermodynamics": {
+            "energyBarrier": "−71.1 meV",
+            "freeEnergy": null,
+            "excitationEnergy": null,
+            "reactionEnthalpy": null
+          }
+        }
+      },
+      {
+        "activation": {
+          "type": "Thermal",
+          "conditions": {
+            "annealingTemperature": "150K",
+            "annealingTime": null,
+            "heatingRate": null,
+            "heatingMethod": null
+          },
+          "description": "the length from the benzene center to the Cl end was measured as 5.6 ± 0.2 Å, which was consistent with the distance obtained by the DFT calculations (5.7 Å). It is worth noting that the unreacted tCEB had a low concentration of less than 5%, suggesting that the Cl−alkynyl bond can also be efficiently activated on the Au(111) surface at 150 K.\nIt is worth noting that the deposition of tCEB on the Au(111) surface at 150 K had no obvious impact on the Au(111) herringbone reconstruction."
+        },
+        "intermediate": {
+          "abbreviation": null,
+          "geometry": null,
+          "iupacName": null,
+          "formula": null,
+          "functionalGroups": null,
+          "morphology": null,
+          "smiles": null,
+          "coverage": null,
+          "symmetryGroup": null,
+          "interMolecularDistance": null,
+          "structuralChanges": " a tCEB in which one Cl−alkynyl is\nactivated to form Cl−Au-alkynyl. The Cl−Au−alkynyl moiety\nis evidently different from Cl−alkynyl; this is because the Au\natom appears as a bright round protrusion, whereas the\nadjacent CC group becomes dim.",
+          "chargeDistribution": null,
+          "dipoleMoment": null,
+          "orientationAngle": null,
+          "description": "the length from the benzene center to the Cl end was\nmeasured as 5.6 ± 0.2 Å, which was consistent with the\ndistance obtained by the DFT calculations (5.7 Å). It is worth\nnoting that the unreacted tCEB had a low concentration of less\nthan 5%, suggesting that the Cl−alkynyl bond can also be\nefficiently activated on the Au(111) surface at 150 K"
+        },
+        "characterizations": {
+          "characterizations": [
+            {
+              "instrument": {
+                "type": "Ultra-High Vacuum STM",
+                "parameters": {
+                  "scantemp": "77K",
+                  "bias": "−1.0 V",
+                  "tunnelingCurrent": "0.1 nA",
+                  "conditions": {
+                    "setpoint": "0.1 nA"
+                  },
+                  "description": "The Cl−Au−alkynyl moiety is evidently different from Cl−alkynyl; this is because the Au atom appears as a bright round protrusion, whereas the adjacent CC group becomes dim. The distance between the benzene center and the Cl end in the reacted tCEB was measured as 8.4 ± 0.2 Å, which was consistent with the distance obtained through the DFT calculations (8.3 Å).B monomers and dimers."
+                }
+              }
+            }
+          ]
+        },
+        "mechanism": {
+          "reactionType": null,
+          "reactionDescription": "e deposited a submonolayer of tCEB on Au(111) at 150\nK, which resulted in the formation of two phases. A close\npacking of tCE a tCEB in which one Cl−alkynyl is\nactivated to form Cl−Au-alkynyl. The Cl−Au−alkynyl moiety\nis evidently different from Cl−alkynyl; this is because the Au\natom appears as a bright round protrusion, whereas the\nadjacent CC group becomes dim. the alkynyl groups of\ntwo tCEB units in a dimer are linked by a gold atom. The\nlength between the two benzene rings obtained by STM\nmeasurement was 12 ± 0.5 Å; this value was consistent with\nthat obtained through the DFT calculations (12.0 Å). ",
+          "kinetics": {
+            "activationEnergy": null,
+            "rateConstant": null,
+            "reactionOrder": null,
+            "preExponentialFactor": null
+          },
+          "thermodynamics": {
+            "energyBarrier": null,
+            "freeEnergy": null,
+            "excitationEnergy": null,
+            "reactionEnthalpy": null
+          }
+        }
+      },
+      {
+        "activation": {
+          "type": "Thermal",
+          "conditions": {
+            "annealingTemperature": "300K",
+            "annealingTime": null,
+            "heatingRate": null,
+            "heatingMethod": null
+          },
+          "description": "the sample was annealed at 300 K, the resulting structures were composed of 46% dimers and 54% short zigzag chain."
+        },
+        "intermediate": {
+          "abbreviation": null,
+          "geometry": null,
+          "iupacName": null,
+          "formula": null,
+          "functionalGroups": null,
+          "morphology": "dimers and short zigzag chains",
+          "smiles": null,
+          "coverage": " 46% dimers and 54% short zigzag chains",
+          "symmetryGroup": null,
+          "interMolecularDistance": null,
+          "structuralChanges": null,
+          "chargeDistribution": null,
+          "dipoleMoment": null,
+          "orientationAngle": null,
+          "description": "short zigzag chains fitted with chemical structures. Sub-\nsequently, the activation of the second Cl−alkynyl bond\noccurred, which linked the tCEB units into zigzag chains. As\nindicated by the white dashed circle, two Cl−Au−alkynyl\nsubstitutes assemble in the vicinity position, thereby suggesting\nthat a further reaction might occur between the two Cl−Au−\nalkynyl substitutes to form a longer zigzag chain. It is worth\nnoting that the deposition of tCEB on the Au(111) surface at\n150 K had no obvious impact on the Au(111) herringbone\nreconstruction. However, after annealing the sample at 300 K,\nthe Au(111) herringbone reconstruction was altered\nThe structural fitting in the magnified image\n(Figure 2h) illustrates that the zigzag chains are Au−alkynyl\ncomplexes, in which two Cl−alkynyl bonds are activated and\nonly one Cl−alkynyl bond remains intact."
+        },
+        "characterizations": {
+          "characterizations": [
+            {
+              "instrument": {
+                "type": "Ultra-High Vacuum STM",
+                "parameters": {
+                  "scantemp": "77K",
+                  "bias": "−1.0 V",
+                  "tunnelingCurrent": "0.1nA",
+                  "conditions": {
+                    "setpoint": "0.1nA"
+                  },
+                  "description": "short zigzag chains fitted with chemical structures. Subsequently, the activation of the second Cl−alkynyl bond occurred, which linked the tCEB units into zigzag chains. As indicated by the white dashed circle, two Cl−Au−alkynyl substitutes assemble in the vicinity position, thereby suggesting that a further reaction might occur between the two Cl−Au−alkynyl substitutes to form a longer zigzag chain. It is worth noting that the deposition of tCEB on the Au(111) surface at 150 K had no obvious impact on the Au(111) herringbone reconstruction. However, after annealing the sample at 300 K, the Au(111) herringbone reconstruction was altered"
+                }
+              }
+            }
+          ]
+        },
+        "mechanism": {
+          "reactionType": null,
+          "reactionDescription": "This phenomenon may be attributed to the\nactivation of Cl−alkynyl, which may lift the Au atoms from the\nAu(111) herringbone reconstruction. When the sample was\nannealed to 393 K, the tCEB units were linked to form\nsignificantly longer zigzag chains, which self-assembled in a\nstaggered arrangement to form a compact structure,",
+          "kinetics": {
+            "activationEnergy": null,
+            "rateConstant": null,
+            "reactionOrder": null,
+            "preExponentialFactor": null
+          },
+          "thermodynamics": {
+            "energyBarrier": null,
+            "freeEnergy": null,
+            "excitationEnergy": null,
+            "reactionEnthalpy": null
+          }
+        }
+      },
+      {
+        "activation": {
+          "type": "Thermal",
+          "conditions": {
+            "annealingTemperature": "453 K",
+            "annealingTime": null,
+            "heatingRate": null,
+            "heatingMethod": null
+          },
+          "description": "It is worth noting that the honeycomb Au–alkynyl networks can also be observed at the annealing temperature of 453 K, and the ratio of the chiral Au–alkynyl networks to the honeycomb Au-alkynyl networks is 7:1. "
+        },
+        "intermediate": {
+          "abbreviation": null,
+          "geometry": null,
+          "iupacName": null,
+          "formula": null,
+          "functionalGroups": null,
+          "morphology": "It is worth noting that the honeycomb Au–alkynyl networks can also be observed at the annealing temperature of 453 K, and the ratio of the chiral Au–alkynyl networks to the honeycomb Au-alkynyl networks is 7:1. ",
+          "smiles": null,
+          "coverage": null,
+          "symmetryGroup": null,
+          "interMolecularDistance": null,
+          "structuralChanges": null,
+          "chargeDistribution": null,
+          "dipoleMoment": null,
+          "orientationAngle": null,
+          "description": "It is worth noting that the honeycomb Au–alkynyl networks can also be observed at the annealing temperature of 453 K, and the ratio of the chiral Au–alkynyl networks to the honeycomb Au-alkynyl networks is 7:1. "
+        },
+        "characterizations": {
+          "characterizations": [
+            {
+              "instrument": {
+                "type": "Ultra-High Vacuum STM",
+                "parameters": {
+                  "scantemp": "77K",
+                  "bias": "-0.1V",
+                  "tunnelingCurrent": "0.1nA",
+                  "conditions": {
+                    "setpoint": "0.1nA"
+                  },
+                  "description": "It is worth noting that the honeycomb Au–alkynyl networks can also be observed at the annealing temperature of 453 K, and the ratio of the chiral Au–alkynyl networks to the honeycomb Au-alkynyl networks is 7:1. "
+                }
+              }
+            }
+          ]
+        },
+        "mechanism": {
+          "reactionType": null,
+          "reactionDescription": "It is worth noting that the honeycomb Au–alkynyl networks can also be observed at the annealing temperature of 453 K, and the ratio of the chiral Au–alkynyl networks to the honeycomb Au-alkynyl networks is 7:1. ",
+          "kinetics": {
+            "activationEnergy": null,
+            "rateConstant": null,
+            "reactionOrder": null,
+            "preExponentialFactor": null
+          },
+          "thermodynamics": {
+            "energyBarrier": null,
+            "freeEnergy": null,
+            "excitationEnergy": null,
+            "reactionEnthalpy": null
+          }
+        }
+      }
+    ]
+  },
+  "finalStage": {
+    "type": "Thermal",
+    "activation": {
+      "conditions": {
+        "annealingTemperature": "393 K, 473 K",
+        "annealingTime": null,
+        "heatingRate": null,
+        "heatingMethod": null
+      },
+      "description": "By increasing the annealing temperature to 393 K, the irregular organometallic network transformed to a single domain of large-scale honeycomb Ag−alkynyl networks."
+    },
+    "products": {
+      "products": [
+        {
+          "abbreviation": null,
+          "morphology": "large-scale honeycomb Ag–alkynyl networks",
+          "structuralChanges": null,
+          "iupacName": null,
+          "smiles": null,
+          "formula": null,
+          "symmetryGroup": null,
+          "coverage": null,
+          "geometry": "honeycomb",
+          "interMolecularDistance": "2.7 ± 0.2 Å",
+          "orientationAngle": null,
+          "functionalGroups": null,
+          "dipoleMoment": null,
+          "chargeDistribution": null,
+          "description": "unit cell of a = b = 21.3 ± 0.8 Å, θ = 120°he efficient transformation from irregular structures to honeycomb Ag–alkynyl networks at a mild annealing temperature of 393 K demonstrated a good reversibility of the break/formation reactions of the Ag–alkynyl bond on the Ag(111) surface. This facilitated the self-healing process for repairing irregular rings that were observed in the irregular organometallic networks to afford thermodynamically stable honeycomb networks.Moreover, the atoms-in-molecules (AIM) analysis suggested that the bond energy of the Cl···H interaction was −71.1 meV, which confirmed the stabilization effect of the chlorine atoms on the honeycomb networks",
+          "orderingDescription": "the activation of three Cl–alkynyl bonds was completed, and the hexagons were unexpectedly connected to form novel chiral Au–alkynyl networks with a unit cell of a = b = 42.0 ± 0.8 Å, θ = 120°\n Moreover, the atoms-in-molecules (AIM) analysis suggested that the bond energy of the Cl···H interaction was −71.1 meV, which confirmed the stabilization effect of the chlorine atoms on the honeycomb networks\n",
+          "electronicProperty": null,
+          "spinState": null,
+          "transportProperty": null
+        },
+        {
+          "abbreviation": null,
+          "morphology": "honeycomb Au−alkynyl networks",
+          "structuralChanges": null,
+          "iupacName": null,
+          "smiles": null,
+          "formula": null,
+          "symmetryGroup": null,
+          "coverage": null,
+          "geometry": null,
+          "interMolecularDistance": null,
+          "orientationAngle": null,
+          "functionalGroups": null,
+          "dipoleMoment": null,
+          "chargeDistribution": null,
+          "description": null,
+          "orderingDescription": "many organometallic fragments could be found\n\ninteresting arrangement can be regarded as a regular hexagon core with six circumambient-distorted hexagons. Note that two enantiomeric networks, which have been indicated as clockwise (CW) and counterclockwise (CCW), coexist in the sample",
+          "electronicProperty": null,
+          "spinState": null,
+          "transportProperty": null
+        }
+      ]
+    },
+    "characterizations": {
+      "characterizations": [
+        {
+          "instrument": {
+            "type": "Ultra-High Vacuum STM",
+            "parameters": {
+              "scantemp": "77K",
+              "bias": "-1.0V",
+              "tunnelingCurrent": "0.1nA",
+              "conditions": {
+                "setpoint": "0.1nA"
+              },
+              "description": "the tCEB units were linked to form significantly longer zigzag chains, which self-assembled in a staggered arrangement to form a compact structure. The structural fitting in the magnified image illustrates that the zigzag chains are Au–alkynyl complexes, in which two Cl–alkynyl bonds are activated and only one Cl–alkynyl bond remains intact."
+            }
+          }
+        }
+      ]
+    },
+    "mechanism": {
+      "reactionType": null,
+      "reactionDescription": "The efficient transformation from irregular structures to honeycomb Ag−alkynyl networks at a mild annealing temperature of 393 K demonstrated a good reversibility of the break/formation reactions of the Ag−alkynyl bond on the Ag(111) surface.",
+      "kinetics": {
+        "activationEnergy": null,
+        "rateConstant": null,
+        "reactionOrder": null,
+        "preExponential": null
+      },
+      "thermodynamics": {
+        "energyBarrier": null,
+        "freeEnergy": null,
+        "excitationEnergy": null,
+        "reactionEnthalpy": null
+      }
+    }
+  },
+  "literature": {
+    "doi": "10.1021/jacs.0c04311",
+    "journal": "J. Am. Chem. Soc.",
+    "year": "2020",
+    "title": "Atomic-Scale Visualization of Stepwise Growth Mechanism of Metal-Alkynyl Networks on Surfaces",
+    "pages": "16579−16586"
+  },
+  "generatedAt": "2025-07-08T04:53:52.412Z",
+  "recordId": "477c4694-fd4d-4fbb-b8b9-83b362003ad2"
+}

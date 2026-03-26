@@ -1,7 +1,7 @@
 # Surface Science Assistant
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
+[![Python 3.10+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 
 > A comprehensive deep learning and large language model-based literature processing and intelligent Q&A system for surface science, specifically designed for on-surface synthesis research.
 
